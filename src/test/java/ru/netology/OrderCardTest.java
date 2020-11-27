@@ -16,7 +16,7 @@ public class OrderCardTest {
     @Test
     void ifAllValueCorrect() {
         $("[data-test-id=name] input").setValue("Петр");
-        $("[data-test-id=phone] input").setValue("+7912345678");
+        $("[data-test-id=phone] input").setValue("+79123456789");
         $("[data-test-id=agreement]").click();
         $("button").click();
         $("[data-test-id=order-success]").shouldHave(exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
