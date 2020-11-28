@@ -15,7 +15,7 @@ public class OrderCardTest {
 
     @Test
     void ifAllValueCorrect() {
-        $("[data-test-id=name] input").setValue("Петр");
+        $("[data-test-id=name] input").setValue("Петр Филатов");
         $("[data-test-id=phone] input").setValue("+79123456789");
         $("[data-test-id=agreement]").click();
         $("button").click();
@@ -24,7 +24,7 @@ public class OrderCardTest {
 
     @Test
     void ifNameInEnglish() {
-        $("[data-test-id=name] input").setValue("Petr");
+        $("[data-test-id=name] input").setValue("Petr Filatov");
         $("[data-test-id=phone] input").setValue("+79123456789");
         $("[data-test-id=agreement]").click();
         $("button").click();
@@ -51,7 +51,7 @@ public class OrderCardTest {
 
     @Test
     void ifNumberLessTen() {
-        $("[data-test-id=name] input").setValue("Петр");
+        $("[data-test-id=name] input").setValue("Петр Филатов");
         $("[data-test-id=phone] input").setValue("+7912345678");
         $("[data-test-id=agreement]").click();
         $("button").click();
@@ -60,7 +60,7 @@ public class OrderCardTest {
 
     @Test
     void ifNumberMoreTen() {
-        $("[data-test-id=name] input").setValue("Петр");
+        $("[data-test-id=name] input").setValue("Петр Филатов");
         $("[data-test-id=phone] input").setValue("+791234567890");
         $("[data-test-id=agreement]").click();
         $("button").click();
@@ -69,7 +69,7 @@ public class OrderCardTest {
 
     @Test
     void ifNumberIsSymbol() {
-        $("[data-test-id=name] input").setValue("Петр");
+        $("[data-test-id=name] input").setValue("Петр Филатов");
         $("[data-test-id=phone] input").setValue("qwerty");
         $("[data-test-id=agreement]").click();
         $("button").click();
@@ -78,7 +78,7 @@ public class OrderCardTest {
 
     @Test
     void ifNumberIsEmpty() {
-        $("[data-test-id=name] input").setValue("Петр");
+        $("[data-test-id=name] input").setValue("Петр Филатов");
         $("[data-test-id=phone] input").setValue("+79123456789");
         $("button").click();
         $("[data-test-id=agreement].input_invalid .checkbox__text").shouldHave(exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй"));
